@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smash Racing - You vs 11 CPUs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <h1>Smash Racing</h1>
+    <p class="controls">
+      <strong>Up/W</strong> go forward along track · <strong>Left/Right or A/D</strong> steer · <strong>F</strong> smash · 3 laps
+    </p>
+    <div class="hud">
+      <span>Lap: <span id="lap">1</span> / 3</span>
+      <span>Position: <span id="rank">-</span></span>
+      <span class="smash-status" id="smashStatus">Press F to smash</span>
+    </div>
+    <canvas id="gameCanvas" width="900" height="600"></canvas>
+    <div id="gameOver" class="overlay hidden">
+      <div class="message">
+        <h2 id="resultText">You win!</h2>
+        <button id="restartBtn">Race again</button>
+      </div>
+    </div>
+    <div id="startScreen" class="overlay">
+      <div class="message">
+        <h2>Smash Racing</h2>
+        <p>You vs 11 CPUs · Press F to smash into them</p>
+        <button id="startBtn">Start race</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
